@@ -2,9 +2,9 @@
   "name": "node-modules.io",
   "version": "0.0.0",
   "description": "Experimental alternative module loader",
-  "main": "index.js",
+  "main": "lib/node-modules.io",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node lib/node-modules.io"
   },
   "repository": {
     "type": "git",
