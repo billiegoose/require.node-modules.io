@@ -1,0 +1,19 @@
+{
+  "name": "node-modules.io",
+  "version": "0.0.0",
+  "description": "Experimental alternative module loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmhilton/require.node-modules.io.git"
+  },
+  "author": "William Hilton <wmhilton@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/wmhilton/require.node-modules.io/issues"
+  },
+  "homepage": "https://github.com/wmhilton/require.node-modules.io#readme"
+}
