@@ -1,6 +1,13 @@
 # require.node-modules.io
 Experimental alternative module loader aiming to challenge the status quo
 
+## Checklist
+- [x] Locate tarball from module string
+- [x] Download, verify shasum, and install tarball
+- [x] Deal with scopes
+- [ ] Deal with semver dependencies
+- [ ] Fully recurse
+
 # Warning :warning: This module contains wild ideas and strong opinions
 I'm not happy with Node's module management.
 
@@ -29,6 +36,10 @@ const express = node_module('express/4.14.0')
 
 It will alert you with deprecation messages if your package.json is
 out of date, or update them automatically if you add an option to your `package.json` file giving it permission to do so.
+
+```json
+
+```
 
 # Stream-of-conciousness
 Here's what I'm thinking...
