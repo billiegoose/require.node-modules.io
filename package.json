@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Experimental alternative module loader",
   "main": "lib/node-modules.io",
+  "bin": "lib/cli.js",
   "scripts": {
-    "test": "node lib/node-modules.io"
+    "test": "cross-env DEBUG=* node lib/cli.js @wmhilton/log/1.0.0"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,14 @@
   },
   "homepage": "https://github.com/wmhilton/require.node-modules.io#readme",
   "dependencies": {
+    "debug": "2.2.0",
     "node-fetch": "1.6.0",
     "sha": "2.0.1",
     "shelljs": "0.7.3",
     "tarball-extract": "0.0.3",
     "watt": "3.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^2.0.0"
   }
 }
