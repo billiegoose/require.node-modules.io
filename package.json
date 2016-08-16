@@ -5,7 +5,7 @@
   "main": "lib/node-modules.io",
   "bin": "lib/cli.js",
   "scripts": {
-    "test": "cross-env DEBUG=* node lib/cli.js @wmhilton/log/1.0.0"
+    "test": "cross-env DEBUG=* node lib/cli.js @wmhilton/log/1.x"
   },
   "repository": {
     "type": "git",
