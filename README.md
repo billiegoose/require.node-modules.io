@@ -5,7 +5,7 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Locate tarball from module string
 - [x] Download, verify shasum, and install tarball
 - [x] Deal with scopes
-- [ ] Deal with semver dependencies
+- [x] Deal with semver dependencies
 - [ ] Fully recurse
 
 # Warning :warning: This module contains wild ideas and strong opinions
