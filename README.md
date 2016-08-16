@@ -6,7 +6,8 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Download, verify shasum, and install tarball
 - [x] Deal with scopes
 - [x] Deal with semver dependencies
-- [ ] Fully recurse
+- [x] Fully recurse
+- [ ] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
 
 # Warning :warning: This module contains wild ideas and strong opinions
 I'm not happy with Node's module management.
