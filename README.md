@@ -7,7 +7,9 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Deal with scopes
 - [x] Deal with semver dependencies
 - [x] Fully recurse
-- [ ] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
+- [x] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
+- [ ] Optimize
+- [ ] Robustify
 
 # Warning :warning: This module contains wild ideas and strong opinions
 I'm not happy with Node's module management.
