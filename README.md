@@ -11,6 +11,23 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Make tarball locations deterministic (hence cacheable)
 - [ ] Create a Set and iterate over it like a queue to prevent circular dependencies (such as `standard/8.0.0`) causing loops
 - [ ] Replace symlinks with shims that use require.node-modules.io (adds an interesting possibility of continuing the "install on require" philosophy)
+- [ ] Refactor directory structure to prepare for mounting tarballs directly as immutable (read-only) packages on linux using FUSE.
+
+Refactor this:
+
+```
+pkg/@scope/packagename/1.x.x.tgz
+lib/@scope/packagename/1.x.x/*
+lib/@scope/packagename/1.x.x/*/node_modules/dependencies
+```
+Into this:
+```
+@scope/packagename/1.x.x/m.tgz <-- mount m.tgz as folder m
+@scope/packagename/1.x.x/m/package/*  <-- (I arbitrarily chose /m/ to keep filenames shorter)
+@scope/packagename/1.x.x/node_modules/dependencies <-- dependencies are ABOVE pkg folder not inside
+@scope/packagename/1.x.x/package.json <-- cached metadata
+```
+
 - [ ] Robustify
 
 # Warning :warning: This module contains wild ideas and strong opinions
