@@ -1,0 +1,27 @@
+{
+  "name": "registry-resolve",
+  "version": "0.1.3",
+  "description": "Resolve a package version from an npm-like registry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resolve",
+    "package",
+    "version",
+    "npm"
+  ],
+  "author": "Gustavo Sillero",
+  "email": "gustavo@sille.ro",
+  "url": "https://github.com/sillero/registry-resolve",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sillero/registry-resolve.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.5.0",
+    "semver": "^5.1.0"
+  }
+}

@@ -8,7 +8,8 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Deal with semver dependencies
 - [x] Fully recurse
 - [x] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
-- [ ] Optimize (re-write async recursion as a QUEUE. Note that also solves all race conditions so we can eliminate tempfiles.)
+- [x] Make tarball locations deterministic (hence cacheable)
+- [ ] Create a Set and iterate over it like a queue to prevent circular dependencies (such as `standard/8.0.0`) causing loops
 - [ ] Robustify
 
 # Warning :warning: This module contains wild ideas and strong opinions
