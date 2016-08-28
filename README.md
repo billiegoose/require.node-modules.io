@@ -10,6 +10,7 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
 - [x] Make tarball locations deterministic (hence cacheable)
 - [ ] Create a Set and iterate over it like a queue to prevent circular dependencies (such as `standard/8.0.0`) causing loops
+- [ ] Replace symlinks with shims that use require.node-modules.io (adds an interesting possibility of continuing the "install on require" philosophy)
 - [ ] Robustify
 
 # Warning :warning: This module contains wild ideas and strong opinions
