@@ -9,6 +9,7 @@ Experimental alternative module loader aiming to challenge the status quo
 - [x] Fully recurse
 - [x] Insert symlinks so modules are requireable (inspired by [ied](http://registry.node-modules.io/_browse/#/ied))
 - [x] Make tarball locations deterministic (hence cacheable)
+- [ ] Wait... we ought to be able to resolve all the grand-child dependencies just from the package metadata. Can we do that? Without ever reading tarballs?
 - [ ] Create a Set and iterate over it like a queue to prevent circular dependencies (such as `standard/8.0.0`) causing loops
 - [ ] Replace symlinks with shims that use require.node-modules.io (adds an interesting possibility of continuing the "install on require" philosophy)
 - [ ] Refactor directory structure to prepare for mounting tarballs directly as immutable (read-only) packages on linux using FUSE.
