@@ -42,11 +42,14 @@ I'm not happy with Node's module management.
 3. The package.json file tends to get horribly out of sync with reality and requires constant tending to.
   - There is no check to stop you publishing a module that accidentally forgot a dependency in its `package.json` file.
   - There's no check that you forgot to remove an entry from `package.json` that actually isn't ever `require`d.
+4. Last but not least, the module resolution procedure (walking up, looking for node_modules folders) is problematic.
+   The best example being Node [#3402](https://github.com/nodejs/node/issues/3402) where a discussion over
+   what the semantics should be when paths involve symlinks went on for *more than 200 messages over 8 months* without
+   any clear resolution (pardon the pun).
 
 Anyway, one of several ideas I'm playing with to improve Node module management is moving dependency declaration
 away from package.json to the file where it is actually used. This project takes inspiration from lots of places,
-notably [require-install](http://registry.node-modules.io/_browse/#/require-install) and
-[ied](http://registry.node-modules.io/_browse/#/ied).
+notably [require-install] and [ied].
 
 # Usage
 
@@ -63,6 +66,11 @@ out of date, or update them automatically if you add an option to your `package.
 ```json
 
 ```
+
+# HAHAHA no
+Funnily enough, in order to achieve this alt-require semantics, I thought it would be a good idea to handle installing the packages organized by version number. This seems easy at first, until you realize that installing each dependency separately destroy's Node's module caching mechanism which is based on absolute path name (at least until Node 6...). So then you think, well that's easy, I'll just install the dependencies of my dependencies myself, in my fancy versioned directory structure. AND THEN... 
+
+...so anyway, now this project has detoured into creating something like [ied] and [pnpm]
 
 # Stream-of-conciousness
 Here's what I'm thinking...
@@ -104,3 +112,7 @@ const express = node_module('express/4.14.0')
 ```
 
 There. Simple and sweet. No better nor worse than `require`. :shrug:
+
+[ied]: https://local-npm.node-modules.io/#/ied
+[require-install]: https://local-npm.node-modules.io/#/require-install
+[pnpm]: https://local-npm.node-modules.io/#/pnpm
