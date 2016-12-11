@@ -3,7 +3,7 @@ Experimental alternative module loader aiming to challenge the status quo
 
 ## Checklist
 - [x] Resolve all dependencies from the npmjs package metadata, without actually downloading any packages.
-- [ ] Download, verify shasum, and extract tarballs
+- [x] Download, verify shasum, and extract tarballs
 - [ ] Create a symlink (or shim) structure such that runtime require resolution is independent of physical location on disk of modules.
 - [ ] Implement read-only mounting of the module store.
 - [ ] Robustify by creating something like CITGM
@@ -63,7 +63,7 @@ out of date, or update them automatically if you add an option to your `package.
 ```
 
 # HAHAHA no
-Funnily enough, in order to achieve this alt-require semantics, I thought it would be a good idea to handle installing the packages organized by version number. This seems easy at first, until you realize that installing each dependency separately destroy's Node's module caching mechanism which is based on absolute path name (at least until Node 6...). So then you think, well that's easy, I'll just install the dependencies of my dependencies myself, in my fancy versioned directory structure. AND THEN... 
+Funnily enough, in order to achieve this alt-require semantics, I thought it would be a good idea to handle installing the packages organized by version number. This seems easy at first, until you realize that installing each dependency separately destroy's Node's module caching mechanism which is based on absolute path name (at least until Node 6...). So then you think, well that's easy, I'll just install the dependencies of my dependencies myself, in my fancy versioned directory structure. AND THEN...
 
 ...so anyway, now this project has detoured into creating something like [ied] and [pnpm]
 
